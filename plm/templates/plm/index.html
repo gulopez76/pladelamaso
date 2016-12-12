@@ -1,0 +1,58 @@
+{% load bootstrap3 %}
+{% extends 'plm/base.html' %}
+{% load staticfiles %}
+
+    {% block user_content %}
+     <div class="row">
+         <div class="col-md-10 col-sm-12">
+             {% block main-content %}{% endblock %}
+         </div>
+         <div class="col-md-2 hidden-sm">
+             {% block sidebar %}{% endblock %}
+         </div>
+     </div>
+             <div class="col-md-10">
+         	  <h3 align="center">PLA DE LA MASÓ</h3>
+                <div id="carousel-1" class="carousel slide" data-ride="carousel" data-interval=7000>
+                   <!-- Indicadors -->
+                   <ol class="carousel-indicators">
+                        <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-1" data-slide-to="1"></li>
+                        <li data-target="#carousel-1" data-slide-to="2"></li>
+                        <li data-target="#carousel-1" data-slide-to="3"</li>
+                        <li data-target="#carousel-1" data-slide-to="4"></li>
+                        <li data-target="#carousel-1" data-slide-to="5"></li>
+                        <li data-target="#carousel-1" data-slide-to="6"></li>
+                   </ol> 
+
+                       <!-- Contenidor slides -->
+                       <div class="carousel-inner" role="listbox">
+                          <div class="item active">
+                            <img src="{% static "images/photos/varemas/varema1.png" %}" class="img-responsive" alt="">
+<!-- Image 0 -->
+                            <div class="carousel-caption">
+                              <h3>IMG1</h3>
+                              <p>Img1 </p>
+                            </div>
+                          </div>
+<!-- Image 1 -->
+                          <div class="item">
+                            <img src="{% static "images/photos/varemas/varema2.png" %}" class="img-responsive" alt="">
+                            <div class="carousel-caption">
+                              <h3>IMG2</h3>
+                              <p>Img2</p>
+                            </div>
+                          </div>
+<!-- Image 2 -->
+                          <div class="item">
+                            <img src="{% static "images/photos/varemas/varema2.png" %}" class="img-responsive" alt="">
+                            <div class="carousel-caption">
+                              <h3>IMG3</h3>
+                              <p>Img3</p>
+                            </div>
+                          </div>
+                       </div> <!-- end containers -->
+                   </div> <!-- end carousel-inner -->
+         	  <h3 align="center">CONCA DE BARBERÀ</h3>
+                </div> <!-- end col-md-12  -->
+    {% endblock user_content %}

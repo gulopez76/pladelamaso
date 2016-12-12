@@ -1,0 +1,36 @@
+{% load bootstrap3 %}
+{% load staticfiles %}
+{% include 'plm/_messages.html' %}
+
+<!DOCTYPE html="es">
+<html lang>
+    <head>
+        <title>Pla de la Masó</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="{% static "css/plm.css" %}">
+
+    </head>
+
+    <body>
+        {% include "plm/navbar.html" %}
+        <div class="content container">
+          <br>
+            <div class="row">
+                <div class="col-md 12">
+        	{% include "plm/_messages.html" %}
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+        <!-- All that javascript -->
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+        {% block scripts %}
+        {% endblock %}
+    </body>
+</html>
+
