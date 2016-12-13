@@ -11,14 +11,13 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-              {% if user.is_authenticated %}
                 <li class="active"><a href="/">Home</a></li>
                 <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"></i>Varemas<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                                <li><a href="\">2014</a></li>
-                                <li><a href="\">2015</a></li>
-                                <li><a href="\">2016</a></li>
+                                <li><a href="{% url 'plm.views.Varema_view' pk=2 %}">2014</a></li>
+                                <li><a href="{% url 'plm.views.Varema_view' pk=1 %}">2015</a></li>
+                                <li><a href="{% url 'plm.views.Varema_view' pk=3 %}">2016</a></li>
                         </ul>
 		</li>
                 <li class="dropdown">
@@ -26,24 +25,18 @@
                         <ul class="dropdown-menu">
                         		<a href="#" class="dropdown-toggle" data-toggle="dropdown"></i>Negres<b class="caret"></b></a>
                         		<li class="dropdown-menu">
-					   <li><a href="/">Grillat</a></li>
+					   <li><a href="{% url 'plm.views.Vins_view' pk=1 %}">Grillat</a></li>
 					</li>
                         		<a href="#" class="dropdown-toggle" data-toggle="dropdown"></i>Blancs<b class="caret"></b></a>
                         		<li class="dropdown-menu">
-					   <li><a href="/">Grillat</a></li>
+					   <li><a href="{% url 'plm.views.Vins_view' pk=2 %}">Clos Montblanc</a></li>
 					</li>
                         </ul>
 		</li>
-                <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"></i>Preus<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                                <li><a href="/">Negres</a></li>
-                                <li><a href="/">Blancs</a></li>
-                        </ul>
-                        <li><a href="/">Contacte</a></li>
+                <li><a href="{% url 'plm.views.PreusVins_view' %}">Preus</a></li>
+                <li><a href="{% url 'plm.views.Email_view' %}">Contacte</a></li>
 		</li>
                 </li>
-               {% endif %}
             </ul>
         </div><!--/.nav-collapse -->
     </div>

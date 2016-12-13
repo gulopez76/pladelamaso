@@ -1,0 +1,17 @@
+{% extends 'plm/base.html' %}
+
+{% block content %}
+    <h1><p>Envien's un correu</p></h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+       <div class="row">	
+         <div class="col-md-3 hidden-sm"></div>
+         <div class="col-md-6 col-sm-12">
+        	{{ form.as_p }}
+        	<button type="submit" class="save btn btn-default">Send</button>
+		<br><br><br>		
+    <h1><p>Localització</p></h1>
+		<div style="width: 100%"><iframe width="100%" height="600" src="http://www.mapsdirections.info/crear-un-mapa-de-google/map.php?width=100%&height=600&hl=en&q=Carrer%20Comer%C3%A7%2C%2040%2043422+(AGR%C3%8DCOLA%20DE%20BARBER%C3%80%2C%20SCCL)&ie=UTF8&t=&z=16&iwloc=A&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="http://www.mapsdirections.info/crear-un-mapa-de-google/">Crear Google Map</a> by <a href="http://www.mapsdirections.info/">Mapa España</a></iframe></div><br><br><br>
+	  </div>
+         <div class="col-md-3 hidden-sm"></div>
+    </form>
+{% endblock %}

@@ -12,11 +12,16 @@
         <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
         <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap-theme.min.css" %}">
         <link rel="stylesheet" href="{% static "css/plm.css" %}">
-
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"> 
     </head>
 
     <body>
-        {% include "plm/navbar.html" %}
+        <div class="row">
+         <div class="col-md 12">
+          {% include "plm/navbar.html" %}
+         </div>
+        </div>
         <div class="content container">
           <br>
             <div class="row">
@@ -26,6 +31,11 @@
                 {% endblock %}
                 </div>
             </div>
+        </div>
+        <div class="row">
+         <div class="col-md 12">
+          {% include "plm/footer.html" %}
+         </div>
         </div>
         <!-- All that javascript -->
         <script src="http://code.jquery.com/jquery-latest.js"></script>

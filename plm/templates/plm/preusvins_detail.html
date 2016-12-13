@@ -1,0 +1,39 @@
+{% extends 'plm/base.html' %}
+{% load staticfiles  %}
+
+    {% block title %}Llistat de preus {{anyvarema}}{% endblock title %}
+
+    {% block content %}
+	<div class="row">
+	  <div class="col-md-12 col-sm-12">
+	    <h1 align="left"><p>Llistat de Preus</p></h1>
+	  </div>
+	<div class="row">
+	  <div class="col-md-2 hidde-sm"></div>	   
+<!-- detail data -->
+	  <div class="col-md-8">
+		<div class="datagrid table">
+		{{ as_table }}
+		<table>
+		  <tr>
+                    <th><label class="control-label" for="icones">Vi</label></th>
+                    <th><label class="control-label" for="titolvi">Descripció</label></th>
+                    <th><label class="control-label" for="preubrut">Pvp Brut</label></th>
+                    <th><label class="control-label" for="taxa">Taxes</label></th>
+                    <th><label class="control-label" for="preunet">Pvp Net</label></th>
+		  </tr>
+		  {% for idvi in preusvins %}      
+	            <tr>
+		    <td><img src="static/images/{{ idvi.idvi.icones }}" class="img-responsive" alt=""></td>
+                    <td><input size="15" type="text" id="titolvi" name="titolvi" value={{ idvi.idvi.titolvi }}></td>
+                    <td><input size="15" type="text" id="preubrut" name="preubrut" value={{ idvi.preubrut }} ></td>
+                    <td><input size="12" type="text" id="taxa" name="taxa" value={{ idvi.taxa }} ></td>
+                    <td><input size="12" type="text" id="preunet" name="preunet" value={{ idvi.preunet }} ></td>
+		    </tr>	
+		  {% endfor %}
+		 </table>
+		</div>
+	  </div>
+	  <div class="col-md-2 hidden-sm"></div>	   
+	</div>
+    {% endblock content %}

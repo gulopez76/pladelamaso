@@ -1,0 +1,32 @@
+{% extends 'plm/base.html' %}
+{% load staticfiles  %}
+
+    {% block title %}Varema {{anyvarema}}{% endblock title %}
+
+    {% block content %}
+	<div class="row">
+	  <div class="col-md-12 col-sm-12">
+	    <h1 align="left"><p>{{ titol }}</p></h1>
+	  </div>
+	<div class="row">
+	  <div class="col-md-3 hidde-sm"></div>	   
+<!-- detail data -->
+	  <div class="col-md-6">
+	    <div>
+	     <p><img src="/static/images/{{ icones }}" class="img-responsive" alt="" align="left">{{ descripcio|linebreaksbr }} 
+	    </div> 
+	    <div align="center">
+		  <br>
+		  <img src="/static/images/{{ foto1 }}" alt="" align="center">&nbsp;&nbsp;&nbsp;
+		  <img src="/static/images/{{ foto2 }}" alt="" align="center">&nbsp;&nbsp;&nbsp;
+		  <img src="/static/images/{{ foto3 }}" alt="" align="center">
+		  <br><br><br>
+		  <img src="/static/images/{{ foto1 }}" alt="" align="center">&nbsp;
+		  <img src="/static/images/{{ foto2 }}" alt="" align="center">&nbsp;
+		  <img src="/static/images/{{ foto3 }}" alt="" align="center">
+		  </br></br></br></br></br></br>
+	    </div>
+	  </div>
+	  <div class="col-md-3 hidden-sm"></div>	   
+	</div>
+    {% endblock content %}

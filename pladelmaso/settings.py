@@ -111,4 +111,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
 
-DEFAULT_FROM_EMAIL = 'billy@virtelix.cat'
+DEFAULT_FROM_EMAIL = 'billy@virtelix.eu'
+
+# EMAIL SETTINGS
+EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
+EMAIL_HOST = "vmmail.virtelix.eu"
+EMAIL_PORT = "465"
+EMAIL_HOST_USER = "billy@virtelix.eu"
+EMAIL_HOST_PASSWORD = "Jul020751"
+EMAIL_USE_SSL = True
